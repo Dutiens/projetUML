@@ -12,6 +12,7 @@ import com.vaadin.ui.Label;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.HorizontalLayout;
 
 
 import org.slf4j.Logger;
@@ -39,6 +40,12 @@ public class MyUI extends UI {
         final TextField name = new TextField();
         final TextField surname = new TextField();
         Button button = new Button("Click Me") ;
+
+
+	HorizontalLayout menuBar = new HorizontalLayout();
+	Label nomProj = new Label("SalleOp") ;
+	TextField tfRecherche = new TextField("Recherche");
+	Button bRecherche = new Button("Recherche") ;
         
 
     /* explicit callback */

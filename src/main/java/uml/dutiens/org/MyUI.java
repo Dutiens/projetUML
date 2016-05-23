@@ -1,4 +1,4 @@
-package prof.prodageo.org;
+package uml.dutiens.org;
 
 import javax.servlet.annotation.WebServlet;
 

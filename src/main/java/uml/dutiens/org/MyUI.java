@@ -30,66 +30,40 @@ import com.vaadin.ui.Button.ClickEvent;
  * overridden to add component to the user interface and initialize non-component functionality.
  */
 @Theme("mytheme")
-@Widgetset("prof.prodageo.org.MyAppWidgetset")
+@Widgetset("uml.dutiens.org.MyAppWidgetset")
 public class MyUI extends UI {
 
-        private static final Logger log = LoggerFactory.getLogger(MyUIServlet.class);
+	private static final Logger log = LoggerFactory.getLogger(MyUIServlet.class);
 
-    /* explicit declaration as attributes of graphical components for GenMyModel */
-        final VerticalLayout layout = new VerticalLayout();
-        final TextField name = new TextField();
-        final TextField surname = new TextField();
-        Button button = new Button("Click Me") ;
-
-
-	HorizontalLayout menuBar = new HorizontalLayout();
-	Label nomProj = new Label("SalleOp") ;
-	TextField tfRecherche = new TextField("Recherche");
-	Button bRecherche = new Button("Recherche") ;
-        
-
-    /* explicit callback */
-    /* https://vaadin.com/docs/-/part/framework/application/application-events.html */
-    public class ClickMeClass implements Button.ClickListener
-    {
-        public void buttonClick(ClickEvent event) 
-        {
-            layout.addComponent(new Label("Thanks " + name.getValue() + ", it works!"));
-            log.info("Button clicked with value : " + name.getValue());
-        }
-    }
-        
+	private VerticalLayout layout = new VerticalLayout();
+	private HorizontalLayout menuBar = new HorizontalLayout();
+	private Label nomProj = new Label("SalleOp") ;
+	private TextField tfRecherche = new TextField("Recherche");
+	private Button bRecherche = new Button("Recherche") ;
 
 
-    @Override
-    protected void init(VaadinRequest vaadinRequest) {
+	@Override
+	protected void init(VaadinRequest vaadinRequest) {
+		// Style de la barre de menu
+		menuBar.setStyleName(" menu-bar");
+		
+		// Barre de menu
+		menuBar.addComponent(nomProj);
 
-        
-        // final VerticalLayout layout = new VerticalLayout();
-        
-        // final TextField name = new TextField();
-        name.setCaption("Type your name here:");
+		// Title
+		nomProj.setStyleName(" title-h1");
 
-        /*
-        Button button = new Button("Click Me");
-        button.addClickListener( e -> {
-            layout.addComponent(new Label("Thanks " + name.getValue() 
-                    + ", it works!"));
-            log.info("Button clicked with value : " + name.getValue());
-        });
-        */
-        ClickMeClass callback = new ClickMeClass() ;
-        button.addClickListener( callback ) ;
+		//Recherche
 
-        layout.addComponents(name, button);
-        layout.setMargin(true);
-        layout.setSpacing(true);
-        
-        setContent(layout);
-    }
+		// Layout principal
+		layout.addComponent(menuBar);
+		layout.setStyleName(" main-layout");
 
-    @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)
-    @VaadinServletConfiguration(ui = MyUI.class, productionMode = false)
-    public static class MyUIServlet extends VaadinServlet {
-    }
+		setContent(layout);
+	}
+
+	@WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)
+	@VaadinServletConfiguration(ui = MyUI.class, productionMode = false)
+	public static class MyUIServlet extends VaadinServlet {
+	}
 }

@@ -11,6 +11,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
+import com.vaadin.ui.Alignment;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.HorizontalLayout;
 
@@ -37,8 +38,9 @@ public class MyUI extends UI {
 
 	private VerticalLayout layout = new VerticalLayout();
 	private HorizontalLayout menuBar = new HorizontalLayout();
+	private HorizontalLayout menuBarRight = new HorizontalLayout();
 	private Label nomProj = new Label("SalleOp") ;
-	private TextField tfRecherche = new TextField("Recherche");
+	private TextField tfRecherche = new TextField();
 	private Button bRecherche = new Button("Recherche") ;
 
 
@@ -49,6 +51,12 @@ public class MyUI extends UI {
 		
 		// Barre de menu
 		menuBar.addComponent(nomProj);
+		menuBar.addComponent(menuBarRight);
+		menuBarRight.setStyleName(" element-align-right");
+
+		menuBarRight.addComponent(tfRecherche);
+		menuBarRight.addComponent(bRecherche);
+
 
 		// Title
 		nomProj.setStyleName(" title-h1");

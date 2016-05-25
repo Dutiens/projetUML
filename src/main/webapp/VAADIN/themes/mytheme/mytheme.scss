@@ -63,8 +63,19 @@
 		padding: 0;
 	}
 
-	.element-align-right {
+	.v-slot {
+		width: auto;
+		height: 100%;
+		float: left;
+	}	
+
+	.v-slot-element-align-right {
+		width: auto;
+		height: 100%;
 		float: right;
+	}	
+
+	.element-align-right {
 	}
 
 }

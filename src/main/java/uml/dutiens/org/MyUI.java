@@ -14,6 +14,7 @@ import com.vaadin.ui.UI;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.ui.CssLayout;
 
 
 import org.slf4j.Logger;
@@ -38,7 +39,7 @@ public class MyUI extends UI {
 
 	private VerticalLayout layout = new VerticalLayout();
 	private HorizontalLayout menuBar = new HorizontalLayout();
-	private HorizontalLayout menuBarRight = new HorizontalLayout();
+	private CssLayout menuBarRight = new CssLayout();
 	private Label nomProj = new Label("SalleOp") ;
 	private TextField tfRecherche = new TextField();
 	private Button bRecherche = new Button("Recherche") ;

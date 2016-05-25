@@ -78,14 +78,19 @@ public class MyUI extends UI {
 		layout.addComponent(menuBar);
 		layout.addComponent(grid);
 		layout.addComponent(bottom);
-		layout.setStyleName(" main-layout");
+		layout.setStyleName(" full-width");
 
 		grid.addComponent(left, 0, 0);
 		grid.addComponent(right, 0, 1);
 		grid.setWidth("80%");
+		grid.setStyleName(" full-width");
+
+		left.setWidth("35%");
+		right.setWidth("65%");
 
 		// Panel informations
 		left.addComponent(informations);
+
 
 		// Annonce
 		// Titre

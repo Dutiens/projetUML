@@ -51,11 +51,16 @@
 		padding-right: 5%;
 	}
 
-	.main-layout  {
+	.v-slot-full-width {
 		width: 100%;
 		padding: 0;
 	}
-
+	
+	.v-verticallayout-full-width {
+		width: 100%;
+		padding: 0;
+	}
+	
 	.v-slot {
 		display: table;
 		height: 100%;
@@ -69,7 +74,8 @@
 	}
 
 	.v-gridlayout {
-		position: relative;
+		/*position: relative;*/
+		display: block;
 		margin-right: auto;
 		margin-left: auto;
 		margin-top: 50px;

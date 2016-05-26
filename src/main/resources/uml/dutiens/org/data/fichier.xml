@@ -1,0 +1,20 @@
+<Annonce>
+	<information>
+		<nomAnnonce>Studios de répétition Rouen</nomAnnonce>
+		<description>blablab bajahkjahkjakjhk</description>
+		<tarif>10</tarif>
+		<adresse>106 Quai Jean de Béthencourt, 76100 Rouen</adresse>
+	</information>
+	<disponibilites>
+		<disponibilite>12-06-2016</disponibilite>
+		<disponibilite>20-08-2020</disponibilite>
+		<disponibilite>18-03-2022</disponibilite>
+	</disponibilites>
+	<galeriePhotos>
+		<photo>image1.jpg</photo>
+		<photo>image2.jpg</photo>
+		<photo>image3.jpg</photo>
+	</galeriePhotos>
+	<mapUrl>url maps</mapUrl>
+	<agendaUrl>url agenda</agendaUrl>
+</Annonce>

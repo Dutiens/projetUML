@@ -21,7 +21,7 @@ public class Metier{
 	private String agendaUrl ;
 
 	public Metier(String nomFich){
-			
+			nomFich = "../../../../resources/uml/dutiens/org/data/" + nomFich ;
 			images = new ArrayList<String>() ;
 		try {	
 			File inputFile = new File(nomFich);
@@ -41,7 +41,7 @@ public class Metier{
 		
 			NodeList phList = doc.getElementsByTagName("photo") ; 
 			for(int i = 0 ; i < phList.getLength() ; i++)
-				images.add(phList.item(i).getTextContent()) ; 
+				images.add("../../../../resources/uml/dutiens/org/images/"+phList.item(i).getTextContent()) ; 
 		} catch (Exception e) {e.printStackTrace();}
 	}
 

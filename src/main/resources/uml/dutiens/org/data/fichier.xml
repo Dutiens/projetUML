@@ -1,8 +1,8 @@
 <Annonce>
+	<id>0001</id>
 	<information>
-		<nomAnnonce>Studios de répétition Rouen</nomAnnonce>
-		<description>blablab bajahkjahkjakjhk</description>
-		<tarif>10</tarif>
+		<nom>Didier MARIE</nom>
+		<tarif>10.50</tarif>
 		<adresse>106 Quai Jean de Béthencourt, 76100 Rouen</adresse>
 	</information>
 	<disponibilites>
@@ -10,11 +10,19 @@
 		<disponibilite>20-08-2020</disponibilite>
 		<disponibilite>18-03-2022</disponibilite>
 	</disponibilites>
+
+	<nomAnnonce>Studios de répétition Rouen</nomAnnonce>
+	
+	<description>
+		Le 106 a été inauguré le 26 novembre 2010 par MM. Laurent FABIUS, président de la CREA, Alain LE VERN, président du Conseil régional de Haute-Normandie, Didier MARIE, président du Conseil général de Seine Maritime, Valérie FOURNEYRON, députée-maire de Rouen, Rémy CARON, préfet de Région et Guy MARSEGUERRA, président du Centre National des Variétés, de la Chanson et du Jazz.<br/><br/>
+		Depuis lors, il accueille de nombreux spectateurs et musiciens chaque semaine. On y a vu notamment : Patti Smith, Rodriguo Y Gabriela, Pony Pony Run Run, Cocoon, BB Brunes, Katerine, Tiken Jah Fakoly, Aaron, Cali, Dub Inc, Ayo, Apocalyptica, Angus et Julia Stone, Chinese Man, Yodelice, Catherine Ringer, Camille, Orelsan, Charlie Winston, Brigitte, Birdy Nam Nam, Caravane Palace et Thomas Dutronc ...
+	</description>
+
 	<galeriePhotos>
 		<photo>image1.jpg</photo>
 		<photo>image2.jpg</photo>
 		<photo>image3.jpg</photo>
 	</galeriePhotos>
-	<mapUrl>url maps</mapUrl>
+	<mapUrl>https://www.google.fr/maps/place/Le+106/@49.4405346,1.0729293,17z/data=!3m1!4b1!4m5!3m4!1s0x47e0de0a1fb37f3b:0xb8a6eedb3bbdd300!8m2!3d49.4405311!4d1.0751233</mapUrl>
 	<agendaUrl>url agenda</agendaUrl>
 </Annonce>

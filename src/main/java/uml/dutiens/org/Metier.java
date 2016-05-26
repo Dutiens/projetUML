@@ -1,6 +1,9 @@
+package uml.dutiens.org;
+
 import java.util.* ;
 import java.io.* ;
 
+import java.util.*;
 import java.io.File;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
@@ -10,18 +13,20 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 
 
-public class Metier{
+public class Metier {
 
+	private long id;
+	private String nom;
 	private String description ;
-	private String nomAnnonce ;
+	private String titreAnnonce ;
 	private String adresse ;
-	private int tarif ;
+	private double tarif ;
 	private ArrayList<String> images ;
 	private String mapUrl ;
 	private String agendaUrl ;
 
 	public Metier(String nomFich){
-			nomFich = "../../../../resources/uml/dutiens/org/data/" + nomFich ;
+			nomFich = "src/main/resources/uml/dutiens/org/data/" + nomFich ;
 			images = new ArrayList<String>() ;
 		try {	
 			File inputFile = new File(nomFich);
@@ -32,9 +37,11 @@ public class Metier{
 
 			doc.getDocumentElement().normalize();
 
-			this.nomAnnonce = doc.getElementsByTagName("nomAnnonce").item(0).getTextContent();
+			this.nom = doc.getElementsByTagName("nom").item(0).getTextContent();
+			this.titreAnnonce = doc.getElementsByTagName("nomAnnonce").item(0).getTextContent();
 			this.description = doc.getElementsByTagName("description").item(0).getTextContent();
-			this.tarif = Integer.parseInt(doc.getElementsByTagName("tarif").item(0).getTextContent());
+			this.tarif = Double.parseDouble(doc.getElementsByTagName("tarif").item(0).getTextContent());
+			this.id = Long.parseLong(doc.getElementsByTagName("id").item(0).getTextContent());
 			this.adresse = doc.getElementsByTagName("adresse").item(0).getTextContent();
 			this.mapUrl = doc.getElementsByTagName("mapUrl").item(0).getTextContent();
 			this.agendaUrl = doc.getElementsByTagName("agendaUrl").item(0).getTextContent();
@@ -45,19 +52,18 @@ public class Metier{
 		} catch (Exception e) {e.printStackTrace();}
 	}
 
+	public long   getId() { return id; }
+	public String getNom() { return nom; }
 	public String getDescription(){return description;}
-	public String getNom(){return nomAnnonce;}
+	public String getTitre(){return titreAnnonce;}
 	public String getAdresse(){return adresse;}
 	public String getMap(){return mapUrl;}
 	public String getAgenda(){return agendaUrl;}
-	public int getTarif(){return tarif;}
+	public double getTarif(){return tarif;}
 	public ArrayList<String> getImages(){return images ;}
 
-
-
-
 	public String toString(){
-		return "\nNom : "+nomAnnonce+
+		return "\nNom : "+titreAnnonce+
 			"\nDescription : "+description+
 			"\nAdresse : "+adresse+
 			"\nTarif : "+tarif+

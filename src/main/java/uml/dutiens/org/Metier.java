@@ -24,6 +24,7 @@ public class Metier {
 	private ArrayList<String> images ;
 	private String mapUrl ;
 	private String agendaUrl ;
+	private AnnonceDTO annonce ;
 
 	public Metier(String nomFich){
 			nomFich = "src/main/resources/uml/dutiens/org/data/" + nomFich ;
@@ -48,7 +49,9 @@ public class Metier {
 		
 			NodeList phList = doc.getElementsByTagName("photo") ; 
 			for(int i = 0 ; i < phList.getLength() ; i++)
-				images.add("../../../../resources/uml/dutiens/org/images/"+phList.item(i).getTextContent()) ; 
+				images.add("../../../../resources/uml/dutiens/org/images/"+phList.item(i).getTextContent()) ;
+
+			 this.annonce = new AnnonceDTO(id, nom, description,titreAnnonce, adresse, tarif, mapUrl, images, agendaUrl) ;
 		} catch (Exception e) {e.printStackTrace();}
 	}
 
@@ -68,6 +71,9 @@ public class Metier {
 			"\nAdresse : "+adresse+
 			"\nTarif : "+tarif+
 			"\nImages : "+images ; 
+	}
+	public AnnonceDTO getAnnonce(){
+		return annonce;
 	}
 
 }

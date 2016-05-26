@@ -5,8 +5,7 @@ import javax.servlet.annotation.WebServlet;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.annotations.Widgetset;
-import com.vaadin.server.VaadinRequest;
-import com.vaadin.server.VaadinServlet;
+import com.vaadin.server.*;
 import com.vaadin.ui.*;
 import com.vaadin.shared.ui.label.*;
 
@@ -45,8 +44,10 @@ public class MyUI extends UI {
 
 	private final Panel informationsP = new Panel("Informations");
 	private final FormLayout infoContent = new FormLayout();
+	private final BrowserFrame browser = new BrowserFrame("Browser", new ExternalResource("https://www.google.fr/maps/place/Le+106/@49.4405346,1.0729293,17z/data=!3m1!4b1!4m5!3m4!1s0x47e0de0a1fb37f3b:0xb8a6eedb3bbdd300!8m2!3d49.4405311!4d1.0751233"));
 
 	private final Label informations = new Label("Des informations super cool\nAvoue, t'es jaloux\nTrolol", ContentMode.HTML) ;
+	
 
 	private final Label titreAnnonce = new Label("<h1>Un titre</h1>", ContentMode.HTML);
 	private final Label label = new Label(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean enim lacus, mollis eu leo sed, interdum semper mauris. Morbi tortor nulla, tempor sed sem consequat, convallis tincidunt neque. Nunc commodo dolor turpis, eu venenatis metus faucibus vel. Donec id orci dui. Curabitur vitae tristique odio. Aenean sagittis lacus leo, ac tincidunt lectus mattis at. Praesent at enim ac dolor pulvinar suscipit. Aliquam consequat mollis ultrices. Phasellus velit nisl, semper ut tempor placerat, eleifend sit amet sem. Donec porttitor odio magna, nec gravida nisi maximus sit amet. Curabitur et quam porttitor, pulvinar neque a, scelerisque urna. Vivamus nec ante lobortis, dignissim leo a, sagittis est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent vitae est semper, luctus elit ac, ultricies tortor. Pellentesque gravida ut purus quis condimentum. Proin bibendum vitae arcu et viverra. Phasellus mollis erat sem, vitae scelerisque risus tristique et. Aliquam scelerisque nisl eu nulla ultricies elementum. Ut urna nulla, facilisis et elit sit amet, laoreet viverra nulla. Quisque commodo eu elit eu luctus. Morbi varius suscipit tortor vel finibus. Maecenas ullamcorper leo id nulla fermentum, in semper metus posuere. Maecenas a maximus lacus, a varius tellus. Mauris ullamcorper lobortis luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer sit amet metus gravida, accumsan nibh non, maximus nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut ipsum imperdiet, fringilla leo quis, ullamcorper augue. Vestibulum quis venenatis tortor. Quisque eget magna sed dui rhoncus tempor in in leo. Maecenas eget nulla eu nunc pretium mattis. Vivamus maximus elementum ante a rhoncus. Cras rhoncus finibus eros sit amet consectetur. Proin fermentum elit at lectus vehicula euismod. Nullam ut sem placerat, facilisis tellus et, sagittis nisi. Aliquam ut eros sed risus facilisis ornare. Suspendisse vitae mi nec lacus luctus lobortis nec pellentesque tortor. Vivamus at enim et ligula maximus efficitur. In hac habitasse platea dictumst. In lacus massa, vehicula ut feugiat eu, vehicula at turpis. Fusce blandit vitae risus viverra pharetra. Donec sit amet luctus sapien. Maecenas leo libero, semper quis dignissim et, mattis a mi. Cras sed tellus suscipit risus lacinia convallis. Ut nec volutpat leo, eu gravida mauris. Vestibulum a porttitor nisl, id fermentum lectus. Nullam pellentesque nibh sit amet rutrum consectetur. Praesent nec felis luctus, rutrum mauris eget, hendrerit nisl. Vestibulum euismod a elit eget fringilla. Nullam fringilla pretium ullamcorper. Nullam ac arcu nunc. Nam justo leo, ornare ut gravida ac, hendrerit id justo. Fusce auctor sodales felis malesuada porta. Suspendisse suscipit dolor eget tellus mollis fermentum. Donec a eros metus. Vivamus elit magna, porta et vulputate et, auctor quis orci.");
@@ -90,6 +91,10 @@ public class MyUI extends UI {
 		left.addComponent(informationsP);
 		infoContent.addComponent(informations);
 		informationsP.setContent(infoContent);
+
+		browser.setWidth("600px");
+		browser.setHeight("400px");
+		left.addComponent(browser);
 
 		// Annonce
 		right.addComponent(titreAnnonce);

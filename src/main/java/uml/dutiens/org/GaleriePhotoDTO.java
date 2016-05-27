@@ -1,3 +1,5 @@
+package uml.dutiens.org;
+
 import java.util.*;
 public class GaleriePhotoDTO {
 	private ArrayList<PhotoDTO> photos ;

@@ -1,3 +1,4 @@
+package uml.dutiens.org;
 
 public class PhotoDTO {
 	private String lien ;

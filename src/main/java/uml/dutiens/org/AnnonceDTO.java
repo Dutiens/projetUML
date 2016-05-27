@@ -1,3 +1,5 @@
+package uml.dutiens.org;
+
 import java.util.*;
 public class AnnonceDTO{
 	private DisponibilitesDTO disponibilite ;

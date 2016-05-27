@@ -62,7 +62,7 @@ public class MyUI extends UI {
 
 	@Override
 	protected void init(VaadinRequest vaadinRequest) {
-		this.metier = new Metier("fichier.xml");
+		this.metier = new Metier("000001.xml");
 
 		//Définition des textes
 		nom.setValue(String.format("Nom : %s", metier.getNom()));

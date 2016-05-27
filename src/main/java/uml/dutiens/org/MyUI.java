@@ -105,7 +105,8 @@ public class MyUI extends UI {
 		content.setWidth("80%");
 		content.setStyleName(" full-width block-margin");
 
-		left.setWidth("35%");
+		content.setExpandRatio(left, (float)3.0);
+		content.setExpandRatio(right, (float)7.0);
 
 		// Panel informations
 		left.addComponent(informationsP);
@@ -113,10 +114,12 @@ public class MyUI extends UI {
 		infoContent.addComponent(adresse);
 		infoContent.addComponent(tarif);
 		informationsP.setContent(infoContent);
+		informationsP.setWidth("100%");
 
-		browser.setWidth("600px");
+		browser.setWidth("100%");
 		browser.setHeight("400px");
 		left.addComponent(browser);
+		
 
 		// Annonce
 		annonce.setContentMode(ContentMode.HTML);

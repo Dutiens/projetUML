@@ -18,10 +18,10 @@ import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Button.ClickEvent;
 
 /**
- * This UI is the application entry point. A UI may either represent a browser window 
+ * This UI is the application entry point. A UI may either represent a browser window
  * (or tab) or some part of a html page where a Vaadin application is embedded.
  * <p>
- * The UI is initialized using {@link #init(VaadinRequest)}. This method is intended to be 
+ * The UI is initialized using {@link #init(VaadinRequest)}. This method is intended to be
  * overridden to add component to the user interface and initialize non-component functionality.
  */
 @Theme("mytheme")
@@ -52,7 +52,7 @@ public class MyUI extends UI {
 	private final Label nom = new Label("Nom : ", ContentMode.HTML) ;
 	private final Label adresse = new Label("Adresse : ", ContentMode.HTML) ;
 	private final Label tarif = new Label("Tarif : ", ContentMode.HTML) ;
-	
+
 
 	private final Label titreAnnonce = new Label("<h1>Un titre</h1>", ContentMode.HTML);
 	private final Label annonce = new Label();
@@ -74,7 +74,7 @@ public class MyUI extends UI {
 
 		// Style de la barre de menu
 		menuBar.setStyleName(" menu-bar");
-		
+
 		// Barre de menu
 		menuBar.addComponent(nomProj);
 		menuBar.addComponent(menuBarRight);
@@ -119,7 +119,7 @@ public class MyUI extends UI {
 		browser.setWidth("100%");
 		browser.setHeight("400px");
 		left.addComponent(browser);
-		
+		left.setStyleName(" marginTop20");
 
 		// Annonce
 		annonce.setContentMode(ContentMode.HTML);
@@ -132,7 +132,9 @@ public class MyUI extends UI {
 				System.out.println(String.format("GOTO PAGE reservation id: %d", metier.getId()));
 			}
 		});
+		bReservation.setStyleName(" marginTop20 floatRight");
 		right.addComponent(bReservation);
+		right.setStyleName(" padding20");
 		// Galerie photos
 
 		setContent(layout);

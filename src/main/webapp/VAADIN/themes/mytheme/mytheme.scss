@@ -41,7 +41,7 @@
 		font-weight: bold;
 		font-size: 25pt;
 		color: white;
-	}	
+	}
 
 	.menu-bar {
 		background-color: black;
@@ -58,18 +58,18 @@
 		width: 100%;
 		padding: 0;
 	}
-	
+
 	.v-verticallayout-full-width {
 		margin-top: 25px !important;
 		width: 100%;
 		padding: 0;
 	}
-	
+
 	.v-slot {
 		display: table;
 		height: 100%;
 		float: left;
-	}	
+	}
 
 	.v-slot-element-align-right {
 		width: auto;
@@ -83,16 +83,29 @@
 		margin-left: auto;
 		margin-top: 50px;
 	}
-	
+
 	.element-align-middle {
 		display: table-cell;
 		vertical-align: middle;
 	}
-	
+
 	.element-align-right {
 		display: table-cell;
 	}
 
-	.v-generated-body > div > div > .v-verticallayout {
+	.v-textfield {
+		margin-right: 20px !important;
+	}
+
+	.marginTop20 {
+		margin-top: 20px;
+	}
+
+	.padding20 {
+		padding: 20px !important;
+	}
+
+	.floatRight {
+		float:right !important;
 	}
 }

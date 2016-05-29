@@ -3,7 +3,7 @@ package uml.dutiens.entities;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import prof.prodageo.db.DbWrapper;
+import uml.dutiens.db.DbWrapper;
 
 public class MyController
 {

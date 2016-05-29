@@ -108,4 +108,9 @@
 	.floatRight {
 		float:right !important;
 	}
+
+	.marginTop20 > div:nth-child(2){
+		width: 100% !important;
+		height: 200px !important;
+	}
 }

@@ -22,6 +22,7 @@
 			<id>vaadin-addons</id>
 			<url>http://maven.vaadin.com/vaadin-addons</url>
 		</repository>
+
 		<repository>
 			<id>vaadin-snapshots</id>
 			<url>https://oss.sonatype.org/content/repositories/vaadin-snapshots/</url>
@@ -53,6 +54,7 @@
 			<version>3.0.1</version>
 			<scope>provided</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-server</artifactId>
@@ -61,6 +63,7 @@
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-push</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-client</artifactId>
@@ -93,7 +96,7 @@
 			<scope>compile</scope>
 		</dependency>
 
-		<!-- add commons logging to slf4j bridge to classpath --> 
+		<!-- add commons logging to slf4j bridge to classpath -->
 		<!-- acts as jcl but routes commons-logging calls to slf4j -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -125,6 +128,11 @@
 			<version>1.3.170</version>
 		</dependency>
 
+		<dependency>
+			 <groupId>com.vaadin.tapio</groupId>
+			 <artifactId>googlemaps</artifactId>
+			 <version>1.3.0</version>
+		</dependency>
 	</dependencies>
 
 

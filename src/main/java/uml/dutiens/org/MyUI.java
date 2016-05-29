@@ -9,6 +9,9 @@ import com.vaadin.annotations.Widgetset;
 import com.vaadin.server.*;
 import com.vaadin.ui.*;
 import com.vaadin.shared.ui.label.*;
+import com.vaadin.tapio.googlemaps.*;
+import com.vaadin.tapio.googlemaps.client.*;
+import com.vaadin.tapio.googlemaps.client.overlays.*;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,16 +50,15 @@ public class MyUI extends UI {
 
 	private final Panel informationsP = new Panel("Informations");
 	private final FormLayout infoContent = new FormLayout();
-	private BrowserFrame browser;
 
 	private final Label nom = new Label("Nom : ", ContentMode.HTML) ;
 	private final Label adresse = new Label("Adresse : ", ContentMode.HTML) ;
 	private final Label tarif = new Label("Tarif : ", ContentMode.HTML) ;
 
+	private final GoogleMap googleMap = new GoogleMap(null, null, null);
 
 	private final Label titreAnnonce = new Label("<h1>Un titre</h1>", ContentMode.HTML);
 	private final Label annonce = new Label();
-
 	private final Button bReservation = new Button("Reserver") ;
 
 
@@ -68,7 +70,7 @@ public class MyUI extends UI {
 		nom.setValue(String.format("Nom : %s", metier.getNom()));
 		adresse.setValue(String.format("Adresse : %s", metier.getAdresse()));
 		tarif.setValue(String.format("Tarif : %.2f €", metier.getTarif()));
-		browser = new BrowserFrame("Browser", new ExternalResource(metier.getMap()));
+		//browser = new BrowserFrame("Browser", new ExternalResource(metier.getMap()));
 		titreAnnonce.setValue(String.format("<h1>%s</h1>", metier.getTitre()));
 		annonce.setValue(metier.getDescription());
 
@@ -116,9 +118,13 @@ public class MyUI extends UI {
 		informationsP.setContent(infoContent);
 		informationsP.setWidth("100%");
 
-		browser.setWidth("100%");
-		browser.setHeight("400px");
-		left.addComponent(browser);
+		googleMap.setCenter(new LatLon(49.4405134, 1.0751172000000224));
+		googleMap.addMarker(new GoogleMapMarker("Maaria",new LatLon(49.4405134, 1.0751172000000224), false));
+    googleMap.setZoom(15);
+    googleMap.setSizeFull();
+
+
+		left.addComponent(googleMap);
 		left.setStyleName(" marginTop20");
 
 		// Annonce

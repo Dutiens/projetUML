@@ -1,6 +1,7 @@
 package uml.dutiens.org;
 
-import java.util.*;
+import java.util.Date;
+
 import javax.servlet.annotation.WebServlet;
 
 import com.vaadin.annotations.Theme;
@@ -9,6 +10,8 @@ import com.vaadin.annotations.Widgetset;
 import com.vaadin.server.*;
 import com.vaadin.ui.*;
 import com.vaadin.shared.ui.label.*;
+import com.vaadin.addon.calendar.event.*;
+import com.vaadin.addon.calendar.*;
 import com.vaadin.tapio.googlemaps.*;
 import com.vaadin.tapio.googlemaps.client.*;
 import com.vaadin.tapio.googlemaps.client.overlays.*;
@@ -56,6 +59,7 @@ public class MyUI extends UI {
 	private final Label tarif = new Label("Tarif : ", ContentMode.HTML) ;
 
 	private final GoogleMap googleMap = new GoogleMap(null, null, null);
+	private final Calendar calendar = new Calendar();
 
 	private final Label titreAnnonce = new Label("<h1>Un titre</h1>", ContentMode.HTML);
 	private final Label annonce = new Label();
@@ -123,8 +127,17 @@ public class MyUI extends UI {
     googleMap.setZoom(15);
     googleMap.setSizeFull();
 
+		Date start = new Date();
+		Date end = new Date(start.getTime() + 2*24*60*60*1000);
+
+		calendar.setStartDate(start);
+		calendar.setEndDate(end);
+		calendar.setStyleName(" calendar");
+		calendar.setWidth("576px");
+		calendar.setHeight("400px");
 
 		left.addComponent(googleMap);
+		left.addComponent(calendar);
 		left.setStyleName(" marginTop20");
 
 		// Annonce

@@ -110,7 +110,12 @@
 	}
 
 	.marginTop20 > div:nth-child(2){
+		margin-top: 20px !important;
 		width: 100% !important;
 		height: 200px !important;
+	}
+
+	.calendar {
+		margin-top: 20px !important;
 	}
 }

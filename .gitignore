@@ -12,6 +12,6 @@
 hs_err_pid*
 target/
 
-src\main\resources\uml\dutiens\org\MyAppWidgetset.gwt.xml
-src\main\webapp\VAADIN\themes\mytheme\addons.scss
-src\main\webapp\VAADIN\themes\mytheme\styles.css
+src/main/resources/uml/dutiens/org/MyAppWidgetset.gwt.xml
+src/main/webapp/VAADIN/themes/mytheme/addons.scss
+src/main/webapp/VAADIN/themes/mytheme/styles.css

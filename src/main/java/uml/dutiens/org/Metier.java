@@ -52,7 +52,10 @@ public class Metier {
 			for(int i = 0 ; i < phList.getLength() ; i++)
 				images.add("./src/main/resources/uml/dutiens/org/images/"+phList.item(i).getTextContent()) ;
 
-			this.annonce = new AnnonceDTO(id, nom, description,titreAnnonce, adresse, tarif, mapUrl, images, agendaUrl) ;
+			double latitude = Double.parseDouble(doc.getElementsByTagName("latitude").item(0).getTextContent());
+			double longitude = Double.parseDouble(doc.getElementsByTagName("longitude").item(0).getTextContent());
+
+			this.annonce = new AnnonceDTO(id, nom, description,titreAnnonce, adresse, tarif, latitude, longitude, images, agendaUrl) ;
 		} catch (Exception e) {e.printStackTrace();}
 	}
 
@@ -62,10 +65,8 @@ public class Metier {
 	public String getTitre(){return annonce.getInformations().getTitreAnnonce();}
 	public String getAdresse(){return annonce.getInformations().getAdresse();}
 
-	public String getMap(){return mapUrl;} //TODO Corriger
-
-	public double getLongitudeMap(){return 0;}
-	public double getLatitudeMap(){return 0;}
+	public double getLongitude(){return annonce.getInformations().getLongitude();}
+	public double getLatitude(){return annonce.getInformations().getLatitude();}
 
 	public String getAgenda(){return agendaUrl;} //TODO Corriger
 

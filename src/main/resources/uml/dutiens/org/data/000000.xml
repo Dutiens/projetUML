@@ -1,0 +1,28 @@
+<Annonce>
+	<id>000000</id>
+	<information>
+		<nom></nom>
+		<tarif></tarif>
+		<adresse></adresse>
+	</information>
+	<disponibilites>
+		<disponibilite></disponibilite>
+		<disponibilite></disponibilite>
+		<disponibilite></disponibilite>
+	</disponibilites>
+
+	<nomAnnonce></nomAnnonce>
+	
+	<description>
+	</description>
+
+	<galeriePhotos>
+		<photo></photo>
+		<photo></photo>
+		<photo></photo>
+	</galeriePhotos>
+	<mapUrl></mapUrl>
+	<latitude></latitude>
+	<longitude></longitude>
+	<agendaUrl></agendaUrl>
+</Annonce>

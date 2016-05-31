@@ -1,7 +1,7 @@
 <Annonce>
-	<id>0001</id>
+	<id>00001</id>
 	<information>
-		<nom>Didier MARIE</nom>
+		<nom>Le 106</nom>
 		<tarif>10.50</tarif>
 		<adresse>106 Quai Jean de Béthencourt, 76100 Rouen</adresse>
 	</information>
@@ -24,5 +24,7 @@
 		<photo>image3.jpg</photo>
 	</galeriePhotos>
 	<mapUrl>https://www.google.fr/maps/place/Le+106/@49.4405346,1.0729293,17z/data=!3m1!4b1!4m5!3m4!1s0x47e0de0a1fb37f3b:0xb8a6eedb3bbdd300!8m2!3d49.4405311!4d1.0751233</mapUrl>
+	<latitude>49.4405346</latitude>
+	<longitude>1.0729293</longitude>
 	<agendaUrl>url agenda</agendaUrl>
 </Annonce>

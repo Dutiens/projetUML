@@ -68,7 +68,12 @@ public class MyUI extends UI {
 
 	@Override
 	protected void init(VaadinRequest vaadinRequest) {
-		this.metier = new Metier(1);
+		String annonce_id = vaadinRequest.getParameter("id");
+		int id = 0;
+		if (annonce_id != null)
+			id = Integer.parseInt(annonce_id);
+
+		this.metier = new Metier(id);
 
 		//Définition des textes
 		nom.setValue(String.format("Nom : %s", metier.getNom()));
@@ -122,7 +127,7 @@ public class MyUI extends UI {
 		informationsP.setContent(infoContent);
 		informationsP.setWidth("100%");
 
-		googleMap.setCenter(new LatLon(49.4405134, 1.0751172000000224));
+		googleMap.setCenter(new LatLon(metier.getLatitude(), metier.getLongitude()));
 		googleMap.addMarker(new GoogleMapMarker("Maaria",new LatLon(49.4405134, 1.0751172000000224), false));
     googleMap.setZoom(15);
     googleMap.setSizeFull();

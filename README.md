@@ -32,7 +32,7 @@ Sur une machine en local, l'accès se fait à l'aide du navigateur web à l'adre
 
 Avec **id** l'identifiant de la page 'Annonce' à charger.
 
-**Attention : ** Tout identifiant incorrect amènera à une page d'exception dans l'état actuel du projet. 
+__Attention :__ Tout identifiant incorrect amènera à une page d'exception dans l'état actuel du projet. 
 Ici, seul les identifiants __1__ et __2__ sont disponibles.
 
 ---
